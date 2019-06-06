@@ -1,0 +1,5 @@
+instructions :
+
+- create a storage and a service account key
+- export GOOGLE_APPLICATION_CREDENTIALS=./infra-jdxlabs.json
+- terraform (v0.11) init -> plan -> apply

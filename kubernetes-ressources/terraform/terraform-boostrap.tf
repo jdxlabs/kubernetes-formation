@@ -1,17 +1,17 @@
 terraform {
   backend "gcs" {
-    bucket  = "sandbox-wescale-terraform-states"
+    bucket  = "infra-jdxlabs-terraform-states"
     prefix  = "kubernetes-formation"
-    project = "sandbox-wescale"
+    project = "infra-jdxlabs"
     region = "europe-west1"
   }
 }
 
 module "bootstrap-training" {
-  MOD_JSON_PATH       = "sandbox-wescale.json"
-  MOD_PROJECT         = "sandbox-wescale"
+  MOD_JSON_PATH       = "infra-jdxlabs.json"
+  MOD_PROJECT         = "infra-jdxlabs"
   MOD_REGION          = "europe-west1"
-  MOD_COUNT           = 8
+  MOD_COUNT           = 2
 
   source = "modules"
 }
